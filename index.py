@@ -29,7 +29,7 @@ x = users.insert_one(mydict)
 # x = mycol.insert_one(mydict)
 
 # 查询数据
-for x in mycol.find():
+for x in users.find():
   print(x)
 
 # 已经注册用户的列表
