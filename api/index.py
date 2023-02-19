@@ -9,28 +9,28 @@ client = MongoClient()
 db = client['example']
 users = db['users']
 
-# # 连接MongoDB
-# client = pymongo.MongoClient(
-#     "mongodb+srv://Abner:<Abner666>@virus2.lshuthg.mongodb.net/?retryWrites=true&w=majority")
-# # db = client.test
-# db = client['mydatabase']
+# 连接MongoDB
+client = pymongo.MongoClient(
+    "mongodb+srv://Abner:<Abner666>@virus2.lshuthg.mongodb.net/?retryWrites=true&w=majority")
+# db = client.test
+db = client['mydatabase']
 
-# users = db['users']
+users = db['users']
 
-# # 定义数据库
-# # mydb = client["mydatabase"]
+# 定义数据库
+# mydb = client["mydatabase"]
 
-# # 定义集合
-# # mycol = mydb["customers"]
+# 定义集合
+# mycol = mydb["customers"]
 
-# # 插入数据
-# mydict = { "name": "John", "address": "Highway 37" }
-# x = users.insert_one(mydict)
-# # x = mycol.insert_one(mydict)
+# 插入数据
+mydict = { "name": "John", "address": "Highway 37" }
+x = users.insert_one(mydict)
+# x = mycol.insert_one(mydict)
 
-# # 查询数据
-# for x in users.find():
-#   print(x)
+# 查询数据
+for x in users.find():
+  print(x)
 
 # 已经注册用户的列表
 users = [
@@ -52,8 +52,8 @@ def find(username):
 
 @app.route('/')
 def index():
-    # return render_template('index.html')
-    return "111"
+    return render_template('index.html')
+    # return "111"
 
 
 @app.route('/register', methods=['GET', 'POST'])
