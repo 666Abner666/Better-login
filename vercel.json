@@ -1,28 +1,15 @@
 {
-  "version": 2,
   "builds": [
-    {
-      "src": "index.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "start.sh",
-      "use": "@vercel/static-build"
-    }
+      {
+          "use": "@vercel/python",
+          "entrypoint": "app:app",
+          "env": {
+              "FLASK_APP": "app.py"
+          }
+      }
   ],
   "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.py"
-    }
-  ],
-  "env": {
-    "FLASK_APP": "app",
-    "FLASK_ENV": "production"
-  },
-  "framework": "python",
-  "installCommand": "pip install pymongo, pymongo[srv], flask"
+      { "handle": "filesystem" },
+      { "src": "/", "dest": "app.py" }
+  ]
 }
