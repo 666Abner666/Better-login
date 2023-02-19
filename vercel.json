@@ -2,7 +2,6 @@
   "builds": [
       {
           "use": "@vercel/python",
-          "entrypoint": "app:app",
           "env": {
               "FLASK_APP": "app.py"
           }
