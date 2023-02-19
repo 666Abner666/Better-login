@@ -1,3 +1,6 @@
-pip freeze > requirements.txt
+# pip freeze > requirements.txt
 
-Flask==2.0.2
+# Flask==2.0.2
+
+Flask==2.1.2
+pymongo==3.12.0
