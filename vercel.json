@@ -6,7 +6,7 @@
       "use": "@vercel/python"
     },
     {
-      "src": "build.sh",
+      "src": "start.sh",
       "use": "@vercel/static-build"
     }
   ],
@@ -19,10 +19,10 @@
       "dest": "/index.py"
     }
   ],
-  "installCommand": "pip install pymongo, pymongo[srv], flask",
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 30
-    }
-  }
+  "env": {
+    "FLASK_APP": "app",
+    "FLASK_ENV": "production"
+  },
+  "framework": "python",
+  "installCommand": "pip install pymongo, pymongo[srv], flask"
 }
