@@ -11,7 +11,7 @@ users = db['users']
 
 # 连接MongoDB
 client = pymongo.MongoClient(
-    "mongodb+srv://Abner:<Abner666>@virus2.lshuthg.mongodb.net/?retryWrites=true&w=majority")
+    "mongodb+srv://Abner:Abner666@virus2.lshuthg.mongodb.net/virus2?retryWrites=true&w=majority")
 # db = client.test
 db = client['mydatabase']
 
@@ -30,7 +30,7 @@ x = users.insert_one(mydict)
 
 # 查询数据
 for x in users.find():
-  print(x)
+    print(x)
 
 # 已经注册用户的列表
 users = [
