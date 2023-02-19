@@ -8,8 +8,5 @@
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/index.py" }
   ],
-  "dependencies": {
-    "pymongo": "^3.11.4"
-  },
   "installCommand": "pip install pymongo, pymongo[srv], flask"
 }
