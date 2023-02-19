@@ -1,23 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.py"
-    }
-  ],
-  "env": {
-    "FLASK_APP": "app",
-    "FLASK_ENV": "production"
-  },
-  "installCommand": "pip install pymongo, pymongo[srv], flask, gunicorn"
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index" }
+  ]
 }
