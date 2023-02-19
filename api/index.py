@@ -10,28 +10,28 @@ client = MongoClient()
 db = client['example']
 users = db['users']
 
-# 连接MongoDB
-client = pymongo.MongoClient(
-    "mongodb+srv://Abner:Abner666@virus2.lshuthg.mongodb.net/Virus2?retryWrites=true&w=majority")
-# db = client.test
-db = client['mydatabase']
+# # 连接MongoDB
+# client = pymongo.MongoClient(
+#     "mongodb+srv://Abner:Abner666@virus2.lshuthg.mongodb.net/Virus2?retryWrites=true&w=majority")
+# # db = client.test
+# db = client['mydatabase']
 
-users = db['users']
+# users = db['users']
 
-# 定义数据库
-# mydb = client["mydatabase"]
+# # 定义数据库
+# # mydb = client["mydatabase"]
 
-# 定义集合
-# mycol = mydb["customers"]
+# # 定义集合
+# # mycol = mydb["customers"]
 
-# 插入数据
-mydict = { "name": "John", "address": "Highway 37" }
-x = users.insert_one(mydict)
-# x = mycol.insert_one(mydict)
+# # 插入数据
+# mydict = { "name": "John", "address": "Highway 37" }
+# x = users.insert_one(mydict)
+# # x = mycol.insert_one(mydict)
 
-# 查询数据
-for x in users.find():
-    print('x=' + x)
+# # 查询数据
+# for x in users.find():
+#     print('x=' + x)
 
 username = quote_plus('Abner')
 password = quote_plus('Abner666')
