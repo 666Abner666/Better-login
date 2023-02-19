@@ -23,5 +23,5 @@
     "FLASK_APP": "app",
     "FLASK_ENV": "production"
   },
-  "installCommand": "pip install pymongo, pymongo[srv], flask"
+  "installCommand": "pip install pymongo, pymongo[srv], flask, gunicorn"
 }
