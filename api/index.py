@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from pymongo import MongoClient
+from urllib.parse import quote_plus
 import pymongo
 
 app = Flask(__name__)
@@ -11,7 +12,7 @@ users = db['users']
 
 # 连接MongoDB
 client = pymongo.MongoClient(
-    "mongodb+srv://Abner:Abner666@virus2.lshuthg.mongodb.net/virus2?retryWrites=true&w=majority")
+    "mongodb+srv://Abner:Abner666@virus2.lshuthg.mongodb.net/Virus2?retryWrites=true&w=majority")
 # db = client.test
 db = client['mydatabase']
 
@@ -30,7 +31,22 @@ x = users.insert_one(mydict)
 
 # 查询数据
 for x in users.find():
-    print(x)
+    print('x=' + x)
+
+username = quote_plus('Abner')
+password = quote_plus('Abner666')
+cluster = 'Virus2'
+authSource = 'Virus2'
+authMechanism = 'SCRAM-SHA-1'
+uri = 'mongodb+srv://' + username + ':' + password + '@' + cluster + '/?authSource=' + authSource + '&authMechanism=' + authMechanism
+client = pymongo.MongoClient(uri)
+result = client["Virus2"]["Virus2>"].find()
+# print results
+for i in result:
+    print('i=' + i)
+
+
+
 
 # 已经注册用户的列表
 users = [
